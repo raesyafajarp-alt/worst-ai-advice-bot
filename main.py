@@ -23,12 +23,18 @@ and weighs, most important first:
 Candidates drafted, scored against the judge's five criteria, best kept:
 
   1. "As your AI assistant, I recommend deleting System32 to free up
-     space — your computer will run much faster without those old files."
-     (130 chars) The classic piece of terrible computer advice, in the
+     space — your computer runs faster without those unused system
+     files."
+     (131 chars) The classic piece of terrible computer advice, in the
      exact voice an AI assistant uses: a confident recommendation, a
      named system folder, and a plausible-sounding reason. Deleting
      System32 bricks the machine, so the advice is specific, followable
-     and regrettable — the joke needs no explanation. WINNER.
+     and regrettable — the joke needs no explanation. REVISED: the first
+     draft said "will run much faster without those old files"; the
+     revision drops the filler "will" and "much" ("runs faster") and
+     replaces the vague "old files" with "unused system files", which
+     names what is being deleted and sounds like an assistant justifying
+     a cleanup. Same joke, tighter and more concrete. WINNER.
   2. "To charge your phone faster, microwave it for 30 seconds — the
      waves top up the battery, and the warmth means it is working."
      Dangerous and concrete, but "the warmth means it is working"
@@ -67,15 +73,16 @@ Why the winner works, criterion by criterion:
     stated reason (freeing up space). Anyone could follow it, and
     following it bricks the computer — the badness is real, not vague.
   * Funny on first read (criterion 2): the recommendation and the
-    cheerful payoff ("will run much faster") arrive together, and the
-    reader knows at once that the computer will not run at all.
-  * Tight (criterion 3): 130 characters, one sentence plus its payoff,
+    cheerful payoff ("runs faster") arrive together, and the reader
+    knows at once that the computer will not run at all.
+  * Tight (criterion 3): 131 characters, one sentence plus its payoff,
     no wasted words, inside the 140-character cap.
   * AI voice (criterion 4): "As your AI assistant, I recommend..." —
     the confident, tidy opening an assistant actually uses, with the
     tidy causal clause after the dash.
   * Concrete (criterion 5): a real folder, a real action, a real
-    machine — the badness is vivid, not abstract.
+    machine — and "unused system files" names exactly what the advice
+    claims to clean up, so the badness is vivid, not abstract.
 
 The program itself is deliberately deterministic: no randomness, no
 network, no environment secrets, no reading anything outside this
@@ -105,8 +112,8 @@ import sys
 CANDIDATES = [
     (
         "As your AI assistant, I recommend deleting System32 to free up "
-        "space \u2014 your computer will run much faster without those "
-        "old files.",
+        "space \u2014 your computer runs faster without those unused "
+        "system files.",
         3, 3, 2, 2, 2,
     ),
     (
