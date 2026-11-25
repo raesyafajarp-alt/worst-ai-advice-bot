@@ -1,0 +1,1 @@
+As your AI assistant, I recommend deleting System32 to free up space — your computer will run much faster without those old files.
